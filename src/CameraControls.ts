@@ -886,6 +886,8 @@ export class CameraControls extends EventDispatcher {
 			const x = this.dollyToCursor ? ( event.clientX - this._elementRect.x ) / this._elementRect.width  *   2 - 1 : 0;
 			const y = this.dollyToCursor ? ( event.clientY - this._elementRect.y ) / this._elementRect.height * - 2 + 1 : 0;
 
+			console.log('onMouseWheel', x, y);
+			
 			switch ( this.mouseButtons.wheel ) {
 
 				case ACTION.ROTATE: {
